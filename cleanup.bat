@@ -1,3 +1,4 @@
+:: checkvar
 @echo off
 :: Check if running with admin privileges
 :: If not, re-run as administrator
