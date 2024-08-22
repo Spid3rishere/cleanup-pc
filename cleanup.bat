@@ -1,4 +1,3 @@
-:: checkvar
 @echo off
 :: Check if running with admin privileges
 :: If not, re-run as administrator
@@ -8,15 +7,6 @@ if '%errorlevel%' NEQ '0' (
     powershell -Command "Start-Process cmd.exe -ArgumentList '/c \"%~f0\"' -Verb RunAs"
     exit /b
 )
-
-:: Download the latest version of this script
-echo Updating script...
-curl -o "%~f0" https://raw.githubusercontent.com/Spid3rishere/cleanup-pc/main/cleanup.bat
-echo Script updated. Restarting...
-
-:: Re-run the updated script
-"%~f0"
-exit /b
 
 :: Your original script starts here
 setlocal EnableDelayedExpansion
